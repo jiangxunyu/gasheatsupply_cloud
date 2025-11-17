@@ -1,0 +1,51 @@
+2025-11-17 08:49:15.436 [main] INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-11-17 08:49:15.436 [main] INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-11-17 08:49:17.296 [main] WARN  c.a.c.n.c.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[gasheatsupply.yaml] & group[DEFAULT_GROUP]
+2025-11-17 08:49:17.296 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-gasheatsupply.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-gasheatsupply,DEFAULT_GROUP'}]
+2025-11-17 08:49:17.309 [main] INFO  c.c.g.GasheatsupplyCloudApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 08:49:17.742 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7a73f034-f4a2-30b7-a796-036646223d34
+2025-11-17 08:49:17.894 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2025-11-17 08:49:17.898 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2025-11-17 08:49:17.899 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-17 08:49:17.899 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-17 08:49:18.002 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-17 08:49:18.002 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 685 ms
+2025-11-17 08:49:18.116 [main] INFO  o.s.c.o.FeignClientFactoryBean - For 'gasheatsupply' URL not provided. Will try picking an instance via load-balancing.
+2025-11-17 08:49:19.267 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2025-11-17 08:49:19.273 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2025-11-17 08:49:19.282 [main] INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-11-17 08:49:19.282 [main] INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-11-17 08:49:19.425 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP gasheatsupply 172.20.10.6:8090 register finished
+2025-11-17 08:49:19.745 [main] INFO  c.c.g.GasheatsupplyCloudApplication - Started GasheatsupplyCloudApplication in 5.123 seconds (JVM running for 5.823)
+2025-11-17 08:49:19.753 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=gasheatsupply.yaml, group=DEFAULT_GROUP
+2025-11-17 08:49:19.754 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=gasheatsupply, group=DEFAULT_GROUP
+2025-11-17 08:53:29.119 [Thread-13] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-11-17 08:53:29.119 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-11-17 08:53:29.119 [Thread-13] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-11-17 08:53:29.120 [Thread-5] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-11-17 08:53:29.433 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-11-17 08:53:29.437 [SpringApplicationShutdownHook] INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-11-17 08:53:33.018 [main] INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-11-17 08:53:33.018 [main] INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-11-17 08:53:35.104 [main] WARN  c.a.c.n.c.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[gasheatsupply.yaml] & group[DEFAULT_GROUP]
+2025-11-17 08:53:35.105 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-gasheatsupply.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-gasheatsupply,DEFAULT_GROUP'}]
+2025-11-17 08:53:35.120 [main] INFO  c.c.g.GasheatsupplyCloudApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 08:53:35.498 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7a73f034-f4a2-30b7-a796-036646223d34
+2025-11-17 08:53:35.626 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2025-11-17 08:53:35.630 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2025-11-17 08:53:35.630 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-17 08:53:35.631 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-17 08:53:35.718 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-17 08:53:35.718 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 589 ms
+2025-11-17 08:53:35.823 [main] INFO  o.s.c.o.FeignClientFactoryBean - For 'gasheatsupply' URL not provided. Will try picking an instance via load-balancing.
+2025-11-17 08:53:36.989 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2025-11-17 08:53:36.994 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2025-11-17 08:53:37.001 [main] INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-11-17 08:53:37.001 [main] INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-11-17 08:53:37.128 [main] INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP gasheatsupply 172.20.10.6:8090 register finished
+2025-11-17 08:53:37.457 [main] INFO  c.c.g.GasheatsupplyCloudApplication - Started GasheatsupplyCloudApplication in 5.303 seconds (JVM running for 6.049)
+2025-11-17 08:53:37.464 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=gasheatsupply.yaml, group=DEFAULT_GROUP
+2025-11-17 08:53:37.464 [main] INFO  c.a.c.n.r.NacosContextRefresher - [Nacos Config] Listening config: dataId=gasheatsupply, group=DEFAULT_GROUP
+2025-11-17 08:54:16.597 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-17 08:54:16.597 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-17 08:54:16.597 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
