@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chder.gasheatsupply_cloud.mapper.PriceInfoMapper">
+
+    <resultMap id="baseMap" type="com.chder.gasheatsupply_cloud.model.PriceInfo">
+        <result property="id" column="ID" jdbcType="VARCHAR"/>
+        <result property="coalPrice" column="COAL_PRICE" jdbcType="VARCHAR"/>
+        <result property="waterPrice" column="WATER_PRICE" jdbcType="VARCHAR"/>
+        <result property="enableDate" column="ENABLE_DATE" jdbcType="DATE"/>
+        <result property="status" column="STATUS" jdbcType="VARCHAR"/>
+        <result property="isEnableDelete" column="IS_ENABLE_DELETE" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="IS_DELETE" jdbcType="VARCHAR"/>
+        <result property="operateTime" column="OPERATE_TIME" jdbcType="TIMESTAMP"/>
+        <result property="operatorId" column="OPERATOR_ID" jdbcType="VARCHAR"/>
+        <result property="operatorName" column="OPERATOR_NAME" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="table_columns">
+        ID,
+        COAL_PRICE,
+        WATER_PRICE,
+        ENABLE_DATE,
+        STATUS,
+        IS_ENABLE_DELETE,
+        IS_DELETE,
+        OPERATE_TIME,
+        OPERATOR_ID,
+        OPERATOR_NAME
+    </sql>
+
+    <sql id="page_where">
+        <trim prefix="where" prefixOverrides="and | or ">
+            <if test="item.id != null">and ID = #{item.id}</if>
+            <if test="item.coalPrice != null">and COAL_PRICE = #{item.coalPrice}</if>
+            <if test="item.waterPrice != null">and WATER_PRICE = #{item.waterPrice}</if>
+            <if test="item.enableDate != null">and ENABLE_DATE = #{item.enableDate}</if>
+            <if test="item.status != null">and STATUS = #{item.status}</if>
+            <if test="item.operatorId != null">and OPERATOR_ID = #{item.operatorId}</if>
+            <if test="item.operatorName != null">and OPERATOR_NAME = #{item.operatorName}</if>
+        </trim>
+    </sql>
+
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(1) from HEATING.PRICE_INFO
+        <include refid="page_where" />
+    </select>
+
+    <select id="queryList" resultType="com.chder.gasheatsupply_cloud.model.PriceInfo">
+        select <include refid="table_columns"/>
+        from HEATING.PRICE_INFO
+        <include refid="page_where" />
+        order by OPERATE_TIME desc
+        limit #{startRow},#{pageSize}
+    </select>
+
+    <select id="getLatestPriceInfo" resultType="com.chder.gasheatsupply_cloud.model.PriceInfo">
+        select <include refid="table_columns"/>
+        from HEATING.PRICE_INFO
+        where IS_DELETE = '0'
+        order by OPERATE_TIME desc
+        limit 1
+    </select>
+
+    <insert id="addPriceInfo" parameterType="com.chder.gasheatsupply_cloud.model.PriceInfo">
+        insert into HEATING.PRICE_INFO
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="item.id != null">
+                ID,
+            </if>
+            <if test="item.coalPrice != null">
+                COAL_PRICE,
+            </if>
+            <if test="item.waterPrice != null">
+                WATER_PRICE,
+            </if>
+            <if test="item.enableDate != null">
+                ENABLE_DATE,
+            </if>
+            <if test="item.status != null">
+                STATUS,
+            </if>
+            <if test="item.isEnableDelete != null">
+                IS_ENABLE_DELETE,
+            </if>
+            <if test="item.isDelete != null">
+                IS_DELETE,
+            </if>
+            <if test="item.operateTime != null">
+                OPERATE_TIME,
+            </if>
+            <if test="item.operatorId != null">
+                OPERATOR_ID,
+            </if>
+            <if test="item.operatorName != null">
+                OPERATOR_NAME,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="item.id != null">
+                #{item.id},
+            </if>
+            <if test="item.coalPrice != null">
+                #{item.coalPrice},
+            </if>
+            <if test="item.waterPrice != null">
+                #{item.waterPrice},
+            </if>
+            <if test="item.enableDate != null">
+                #{item.enableDate},
+            </if>
+            <if test="item.status != null">
+                #{item.status},
+            </if>
+            <if test="item.isEnableDelete != null">
+                #{item.isEnableDelete},
+            </if>
+            <if test="item.isDelete != null">
+                #{item.isDelete},
+            </if>
+            <if test="item.operateTime != null">
+                #{item.operateTime},
+            </if>
+            <if test="item.operatorId != null">
+                #{item.operatorId},
+            </if>
+            <if test="item.operatorName != null">
+                #{item.operatorName},
+            </if>
+        </trim>
+    </insert>
+
+    <!-- UserMapper.xml -->
+    <insert id="addBatchPriceInfo" parameterType="java.util.List">
+        INSERT INTO HEATING.PRICE_INFO
+        (
+        <include refid="table_columns"/>
+        )
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (
+            #{item.id},
+            #{item.coalPrice},
+            #{item.waterPrice},
+            #{item.enableDate},
+            #{item.status},
+            #{item.isEnableDelete},
+            #{item.isDelete},
+            #{item.operateTime},
+            #{item.operatorId},
+            #{item.operatorName}
+            )
+        </foreach>
+    </insert>
+
+</mapper>
